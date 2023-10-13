@@ -3,8 +3,10 @@ package main
 //import "fmt"
 
 func main(){
-	cards := []string{"Ace of Diamonds"}
-	cards = append(cards, "Six of Spades")
+	cards := newDeck()
 
-	cards.print()
+	//cards.print()
+	hand, remainingCards := deal(cards, 5)
+	hand.print()
+	remainingCards.print()
 }
